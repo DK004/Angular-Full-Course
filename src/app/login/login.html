@@ -1,0 +1,14 @@
+<p>login works!</p>
+<img [src]="imageUrl"/>
+<br/>
+<button [disabled]="buttonDisable">This is the button</button>
+
+<input [value]="userName"/>
+
+<div [class.active]="isActive">Status</div>
+
+<!-- using property binding for styles -->
+<div [style.height]="height" [style.background-color]="bgColor" >This is a div with property binding style</div>
+
+<!-- using signal for property binding -->
+<h3 [innerText]="'count :' + count()"></h3>
