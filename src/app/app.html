@@ -1,0 +1,13 @@
+<!-- this is set -get i.e. function and event -->
+<input (input)="updateName($event.target.value)" placeholder="Enter Name" />
+<p>Your name is : {{name}}</p>
+
+<!-- get value using only html and events -->
+<input (input)="city=$event.target.value" placeholder="EnerCity" />
+<h3>Your city is {{city}}</h3>
+
+<!-- get set using template reference -->
+<input #userInput placeholder="Enter Email"/>
+<button (click)="getMail(userInput.value)" >Get Email</button>
+
+<p>{{email}}</p>

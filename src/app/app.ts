@@ -9,4 +9,17 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('AngularFullCourse');
+
+  name : string = "";
+
+  updateName(name: string){
+    this.name = name;
+  }
+
+  city : string = "";
+
+  email : string="";
+  getMail(email: string){
+    this.email = email;
+  }
 }
