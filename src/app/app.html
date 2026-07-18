@@ -1,0 +1,49 @@
+<button (click)="toggleText()">Toggle for IF & switch</button>
+
+@if (showText) {
+    <h1 style="font-size:3rem">If & else if section</h1>
+    <input (input)="updateAge($event.target.value)" placeholder="Enter your age"/>
+
+@if (age>0 && age<18){
+    <h1>👶</h1>
+}@else if(age >= 18 && age < 60){
+    <h1>👩</h1>
+}@else if(age >= 60){
+    <h1>👵</h1>
+}@else{
+    <h1>⛔</h1>
+}
+
+
+<h1 style="font-size:3rem">Switch Statement</h1>
+
+<p>Select Page</p>
+<select name="page" (change)="updatePage($event)">
+     <option value="select">Select One</option>
+    <option value="home">Home</option>
+    <option value="about">AboutUs</option>
+    <option value="contact">Contact</option>
+</select>
+
+@switch (page) {
+    @case ('select') {
+        <h1>Select Option</h1>
+    }
+    @case ('home') {
+        <h1>Home Page</h1>
+    }
+    @case ('contact') {
+        <h1>Contact Page</h1>
+    }
+    @case ('about') {
+        <h1>About Page</h1>
+    }
+}
+
+}
+
+
+<button (click)="showFor()">Show For loops code</button>
+@if(isShowFor){
+    <app-loops></app-loops>
+}

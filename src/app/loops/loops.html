@@ -1,0 +1,30 @@
+<h1>FOR loop</h1>
+
+@for(item of items; track $index; let i = $index;){
+    <div style="display:flex; justify-content:space-evenly;" [style.background]="$even?'lightgrey':''">
+        @if ($first) {
+            <p>First ITEM : {{item}}</p>
+        }@else if($last){
+               <p>Last Item :{{item}}</p> 
+        }@else{
+            <p>{{$index+1}}. {{item}}</p>
+            <button (click)="Delete(i,$count)">Remove item</button>
+        }
+</div>
+}
+<h3>Total count of items in list : {{listCount}}</h3>
+
+@for(user of users; track $index){
+<div>
+    <p><b>{{user.name}}</b></p>
+    <p><i>user is {{user.age}} years old.</i></p>
+</div>
+}
+
+
+<h3>Interview Question</h3>
+@for(fruit of fruits; track $index){
+@if(fruit !== ''){
+<p>{{fruit}}</p>
+}
+}
