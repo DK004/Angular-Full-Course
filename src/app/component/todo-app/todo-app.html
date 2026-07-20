@@ -1,0 +1,16 @@
+<h1>todo-app!</h1>
+
+<input placeholder="add your todo here..." #task/>
+<button (click)="addTask(task.value);task.value=''">Add Task to List</button>
+<hr/>
+<ul>
+    @for (task of tasks; track $index) {
+        <li style="display:flex; justify-content:space-between;" [style.background]="$even?'lightgreen':'lightgrey'">
+            <span>{{$index + 1}}</span>
+            <span>{{task}}</span>
+            <button (click)="deleteTask($index)">Delete</button>
+        </li>
+    }
+</ul>
+
+ 
