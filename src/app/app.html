@@ -1,0 +1,8 @@
+<h1>2-way binding</h1>
+<h2>NgModel (old method)</h2>
+<input [(ngModel)]="userName" placeholder="Enter your Username"/>
+<p>User name : {{userName}}</p>
+
+<h2>using Signals(new Way - Recomended)</h2>
+<input (input)="fullName.set($event.target.value)" placeholder="Enter your name"/>
+<p>Your name is :<i>{{fullName()}}</i></p>
