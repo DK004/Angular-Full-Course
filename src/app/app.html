@@ -1,0 +1,24 @@
+<h1>Signals</h1>
+
+<h3>{{signalValue()}}</h3> <!--Needs to be call like function-->
+<h3>{{normalValue}}</h3> 
+
+<button (click)="increment()">+</button>
+<button (click)="decrement()">-</button>
+<button (click)="signalValue.set(100)">Change Signal value</button>
+
+
+<h3>Arrays using Signal</h3>
+<p>{{arr()}}</p>
+<button (click)="addElement()">add element</button>
+
+<h3>Objects using Signal</h3>
+<p>{{obj().name}} : {{obj().age}}</p>
+
+<h1>Computed values in signals : </h1>
+<p>Items added in array : {{items()}}</p>
+<!-- creates reference using # -->
+<input placeholder="Add item price" #cart />
+<button (click)="addItem(cart.value)">Add to Cart</button>
+
+<h3>Cart value {{cartValue()}}</h3>
