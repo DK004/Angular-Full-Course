@@ -63,5 +63,19 @@ export class App {
   });
 
 
+  list=signal<String []>(["Arpit","Chandan","Rahul","prem"]);
+
+
+  features = signal<string[]>([]);
+  role = signal<'user' | 'admin'| ''>("");
+  uLogin(){
+    this.role.set('user');
+    this.features.set(['homePage','contact','about us']);
+  }
+
+  aLogin(){
+    this.role.set('admin');
+    this.features.set(['homePage','contact','about us','admin panel','stats and reports']);
+  }
 
 }

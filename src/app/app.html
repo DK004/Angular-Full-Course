@@ -22,3 +22,27 @@
 <button (click)="addItem(cart.value)">Add to Cart</button>
 
 <h3>Cart value {{cartValue()}}</h3>
+
+<h1>signal array using for loop</h1>
+<ul>
+@for (l of list(); track $index) {
+        <li><span>{{$index+1}}</span> {{l}}</li>
+    }
+</ul>
+
+<h1> Real Worl Example of Reactive UI</h1>
+<button (click)="uLogin()">User Login</button>
+<button (click)="aLogin()">Admin Login</button>
+
+@if (role() === 'user') {
+    <h2>Welcome User</h2>
+}@else if(role() === 'admin'){
+    <h2>Welcom Admin</h2>
+}
+
+<ul>
+
+    @for (f of features(); track $index) {
+    <li>{{f}}</li>    
+    }
+</ul>
