@@ -1,0 +1,10 @@
+
+@for (c of cards1(); track $index) {
+    <app-card
+    [title]="c.title"
+    [desc]="c.description">
+    <button class="btn btn-primary">Edit</button>
+    <button class="btn btn-danger">Delete</button>
+    </app-card>
+    
+}
