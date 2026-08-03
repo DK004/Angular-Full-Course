@@ -1,0 +1,18 @@
+<button (click)="toogleForm()">Toogle Forms</button>
+
+@if (formToggle) {
+<h1>Template Driven Forms</h1>
+<i>Name : </i>
+<input [(ngModel)]="name"  type="text" placeholder="Enter Your name"/>
+<i>Email : </i>
+<input [(ngModel)]="email" type="email" placeholder="Enter you Email here" />
+
+<button (click)="submitForm()">Submit</button>
+
+<p>Name : {{name()}}</p>
+
+<p>Email : {{email()}}</p>
+} @else {
+<h1>Reactive Forms - </h1>
+<p>For Now this is complex lets remember it is used for comples forms/ large forms etc. and uses FormBuilder,ReactiveFormsModule, formGroup</p>
+}
