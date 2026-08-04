@@ -1,3 +1,11 @@
 <h1>Dashboard</h1>
 <!-- <app-dashboard></app-dashboard> -->
+
+@for (item of [].constructor(5); track $index) {
+    <a routerLink="product/{{$index+1}}">Product {{$index+1}}</a>
+    <br/>
+}
+
+<a [routerLink]="['products']" [queryParams]="{category : 'mobile' , sort : 'price'}" >Filter and Sort Product</a>
+
 <router-outlet></router-outlet>
