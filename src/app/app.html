@@ -1,0 +1,18 @@
+<h2><i>User List - </i></h2>
+
+<ul>
+    @for(user of users; track user.id){
+        <li>
+            {{user.name}} - {{user.email}}
+        </li>
+    }
+</ul>
+
+
+<ul>
+    @for(user of usersSignal(); track usersSignal.id){
+        <li>
+            {{user.name}} - {{user.email}}
+        </li>
+    }
+</ul>
